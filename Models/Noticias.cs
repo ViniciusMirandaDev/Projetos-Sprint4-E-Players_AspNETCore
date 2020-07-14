@@ -19,18 +19,30 @@ namespace Projetos_Sprint4_E_Players_AspNETCore.Models
             CreateFolderAndFile(PATH);
         }
 
+        /// <summary>
+        /// Cria a linha do csv
+        /// </summary>
+        /// <param name="n">Noticia a ser criada</param>
         public void Create(Noticias n)
         {
             string[] linhas = { PrepararLinha(n)} ; 
             File.AppendAllLines(PATH, linhas);
         }
 
+         /// <summary>
+         /// Prepara a linnha do csv
+         /// </summary>
+         /// <param name="n">Noticia a ser colocada no scv</param>
+         /// <returns>Linha preparada</returns>
         private string PrepararLinha(Noticias n)
         {
             return $"{n.IdNoticia};{n.Titulo};{n.Texto};{n.Imagem}";
         }
 
-
+        /// <summary>
+        /// Lê todas as linhas do csv
+        /// </summary>
+        /// <returns>Lista de noiticia lida</returns>
         public List<Noticias> ReadAll()
         {
             List<Noticias> noticia = new List<Noticias>();
@@ -50,6 +62,10 @@ namespace Projetos_Sprint4_E_Players_AspNETCore.Models
             return noticia;
         }
 
+        /// <summary>
+        /// Linha do csv atualizada
+        /// </summary>
+        /// <param name="n">Noticia para ser atualizada</param>
         public void Update(Noticias n)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
@@ -58,6 +74,10 @@ namespace Projetos_Sprint4_E_Players_AspNETCore.Models
             RewriteCSV(PATH, linhas);
         }
 
+        /// <summary>
+        /// Apaga a linha do csv
+        /// </summary>
+        /// <param name="IdNoticia">Id da linha de notiícia a ser deletada</param>
         public void Delete(int IdNoticia)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);

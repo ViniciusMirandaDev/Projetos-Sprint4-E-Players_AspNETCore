@@ -18,17 +18,30 @@ namespace Projetos_Sprint4_E_Players_AspNETCore.Models
             CreateFolderAndFile(PATH);
         }
 
+        /// <summary>
+        /// Gera uma nova equipe
+        /// </summary>
+        /// <param name="e">Nova equipe a ser criada</param>
         public void Create(Equipe e)
         {
             string[] linhas = { PrepararLinha(e)} ; 
             File.AppendAllLines(PATH, linhas);
         }
 
+        /// <summary>
+        /// Prepara a linha do csv
+        /// </summary>
+        /// <param name="e">Nova equipe a ser criada</param>
+        /// <returns>Linha do csv formatada</returns>
         private string PrepararLinha(Equipe e)
         {
             return $"{e.IdEquipe};{e.Nome};{e.Imagem}";
         }
 
+        /// <summary>
+        /// Deleta uma linha do csv
+        /// </summary>
+        /// <param name="IdEquipe">Id da equipe</param>
         public void Delete(int IdEquipe)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
@@ -36,6 +49,10 @@ namespace Projetos_Sprint4_E_Players_AspNETCore.Models
             RewriteCSV(PATH, linhas);
         }
 
+        /// <summary>
+        /// Lê a a lista do csv e organiza as informações
+        /// </summary>
+        /// <returns>Lista equipes</returns>
         public List<Equipe> ReadAll()
         {
             List<Equipe> equipes = new List<Equipe>();
@@ -53,6 +70,10 @@ namespace Projetos_Sprint4_E_Players_AspNETCore.Models
             return equipes;
         }
 
+        /// <summary>
+        /// Atualiza o nosso csv
+        /// </summary>
+        /// <param name="e">Equipe a ser atualizada</param>
         public void Update(Equipe e)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
