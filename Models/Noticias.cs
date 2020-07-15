@@ -74,10 +74,10 @@ namespace Projetos_Sprint4_E_Players_AspNETCore.Models
             RewriteCSV(PATH, linhas);
         }
 
-        /// <summary>
-        /// Apaga a linha do csv
+         /// <summary>
+        /// Exclui a noticia
         /// </summary>
-        /// <param name="IdNoticia">Id da linha de notiícia a ser deletada</param>
+        /// <param name="IdNoticia">Noticia que será excluida</param>
         public void Delete(int IdNoticia)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);

@@ -39,13 +39,13 @@ namespace Projetos_Sprint4_E_Players_AspNETCore.Models
         }
 
         /// <summary>
-        /// Deleta uma linha do csv
+        /// Exclui uma equipe
         /// </summary>
-        /// <param name="IdEquipe">Id da equipe</param>
+        /// <param name="IdEquipe">Equipe que será excluida</param>
         public void Delete(int IdEquipe)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
-            linhas.RemoveAll(y => y.Split(";")[0] == IdEquipe.ToString());
+            linhas.RemoveAll(x => x.Split(";")[0] == IdEquipe.ToString());
             RewriteCSV(PATH, linhas);
         }
 
