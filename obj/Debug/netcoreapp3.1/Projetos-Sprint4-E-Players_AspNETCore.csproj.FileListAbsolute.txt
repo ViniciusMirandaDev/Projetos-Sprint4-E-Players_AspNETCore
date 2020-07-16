@@ -10,7 +10,6 @@ C:\Users\amand\Desktop\Projeto senai\Projetos-Sprint4-E-Players_AspNETCore\obj\D
 C:\Users\amand\Desktop\Projeto senai\Projetos-Sprint4-E-Players_AspNETCore\obj\Debug\netcoreapp3.1\Projetos-Sprint4-E-Players_AspNETCore.RazorCoreGenerate.cache
 C:\Users\amand\Desktop\Projeto senai\Projetos-Sprint4-E-Players_AspNETCore\obj\Debug\netcoreapp3.1\Razor\Views\Equipe\Index.cshtml.g.cs
 C:\Users\amand\Desktop\Projeto senai\Projetos-Sprint4-E-Players_AspNETCore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\amand\Desktop\Projeto senai\Projetos-Sprint4-E-Players_AspNETCore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\amand\Desktop\Projeto senai\Projetos-Sprint4-E-Players_AspNETCore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\amand\Desktop\Projeto senai\Projetos-Sprint4-E-Players_AspNETCore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\amand\Desktop\Projeto senai\Projetos-Sprint4-E-Players_AspNETCore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs

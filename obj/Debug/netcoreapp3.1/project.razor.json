@@ -20551,11 +20551,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\amand\\Desktop\\Projeto senai\\Projetos-Sprint4-E-Players_AspNETCore\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\amand\\Desktop\\Projeto senai\\Projetos-Sprint4-E-Players_AspNETCore\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"

@@ -3,22 +3,37 @@
     ViewData["Title"] = "Noticias";
 }
 
+<div class="titulo_pagina">
+    <h1>cadastro de @ViewData["Title"]</h1>
+</div>
 
-<form method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
+<form class="cadastro" method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
 
-    <label for="IdNoticia">IdNoticia</label>
+    <div class="campo">
+
+    <label for="IdNoticia">IdNotícia</label>
     <input type="text" name="IdNoticia" id="IdNoticia">
+    </div>
     
-    <label for="Titulo">Titulo</label>
+    <div class="campo">
+
+    <label for="Titulo">Título</label>
     <input type="text" name="Titulo" id="Titulo">
+    </div>
     
+    <div class="campo">
+
     <label for="Texto">Texto</label>
-    <input type="text" name="Texto" id="Texto">
+    <textarea name="Texto" id="Texto" cols="32.5" rows="10"></textarea>
+    </div>
+
+    <div class="campo">
 
     <label for="Imagem">Imagem</label>
     <input type="file" name="Imagem" id="Imagem">
+    </div>
 
-    <button type="submit">Cadastrar</button>
+    <button class="gradient btn" type="submit">Cadastrar</button>
 
 </form>
 <table class="table table-responsive table-striped">
@@ -36,7 +51,10 @@
                 <td>@n.Titulo</td>
                 <td>@n.Texto</td>
                 <td><img src="img/Noticias/@n.Imagem" alt="Imagem da notícia @n.Titulo" width="40"></td>
-                <td><a asp-area="" asp-controller="Noticias" asp-action="Excluir" asp-route-id="@n.IdNoticia">Excluir</a></td>
+                <td><a asp-area="" asp-controller="Noticias" asp-action="Excluir" asp-route-id="@n.IdNoticia">
+                    <i class="fa fa-trash"></i>
+                    </a>
+                </td>
             </tr>
         }
     </tbody>

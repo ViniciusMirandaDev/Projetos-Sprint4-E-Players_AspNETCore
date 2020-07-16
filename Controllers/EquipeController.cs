@@ -12,11 +12,11 @@ namespace Projetos_Sprint4_E_Players_AspNETCore.Controllers
 {
     public class EquipeController : Controller
     {
-        Equipe equipeModel = new Equipe();
+       Equipe equipeModel = new Equipe();
         /// <summary>
-        /// 
+        /// Aponta para a index da minha view
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A própria View</returns>
         public IActionResult Index()
         {
             ViewBag.Equipes = equipeModel.ReadAll();
@@ -32,14 +32,11 @@ namespace Projetos_Sprint4_E_Players_AspNETCore.Controllers
             Equipe equipe   = new Equipe();
             equipe.IdEquipe = Int32.Parse(form["IdEquipe"]); 
             equipe.Nome     = form["Nome"];
-            equipe.Imagem   = form["Imagem"];
-
-            equipeModel.Create(equipe);
-
-            ViewBag.Equipes = equipeModel.ReadAll();
-            return LocalRedirect("~/Equipe"); 
-
+            // Upload da Imagem
             var file    = form.Files[0];
+
+            // PastaA, PastaB, PastaC, Arquivo.pdf
+            // PastaA/PastaB/Pastac/Arquivo.pdf
             var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Equipes");
 
             if(file != null)
@@ -59,14 +56,13 @@ namespace Projetos_Sprint4_E_Players_AspNETCore.Controllers
             {
                 equipe.Imagem   = "padrao.png";
             }
-            // Upload Final
+            // Fim - Upload da Imagem
 
             equipeModel.Create(equipe);
-            ViewBag.Equipes = equipeModel.ReadAll();
 
-            return LocalRedirect("~/Equipe");
+            return LocalRedirect("~/Equipe"); 
         }
-        
+
         [Route("[controller]/{id}")]
 
         public IActionResult Excluir(int id){
